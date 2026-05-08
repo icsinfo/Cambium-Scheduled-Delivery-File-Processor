@@ -53,6 +53,10 @@ Cambium
 > **Variables are file locations**  
 > Folder variables like **\$source** are pointing to the location of a file and by default are *relative* locations. So they start with ```.\``` If you are changing those make sure to leave this if using relative locations.
 
+> [!NOTE]
+> The version of powershell that comes installed on windows servers by default may not contain all the packages required to run the script.
+> You may either need to install the latest version of powershell, or figure out the missing packages by googling the errors. (It's not pretty but it works). 
+
 You will need to copy the [Process_Files.ps1](Process_Files.ps1) powershell script into the *Cambium/Prod* folder created by the Scheduled Delivery system in the SFTP server.
 
 #### Check File & Folder Variables in File
