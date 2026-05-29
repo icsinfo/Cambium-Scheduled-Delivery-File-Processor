@@ -13,8 +13,8 @@ This project was designed specifically for use with [Focus](https://focusschools
 1. Check to see if **\$zipfile** exists. If so extract it's contents into **\$source**.
 2. Make sure there are files located in **\$source**. If so continue, otherwise *exit*.
 3. Go through each File Group, combine all files from **\$source** that match the group and output the resulting file to **\$dest**.
-  - The process of combining the multiple files into a single .CSV will also de-duplicate header names to prevent issues with Focus Imports.
-  - The process also adds a *filename* column to the exported .csv. This allows us to know which file each row came from, and is useful when importing into the SIS to determine the test level based on the filename the result came from.
+    - The process of combining the multiple files into a single .CSV will also de-duplicate header names to prevent issues with Focus Imports.
+    - The process also adds a *filename* column to the exported .csv. This allows us to know which file each row came from, and is useful when importing into the SIS to determine the test level based on the filename the result came from.
 5. Check for any remaining files in **\$source** that do not belong to any File Group. If found create a folder inside **\$ungrouped** for todays date (yyyy-MM-dd) and move those files to that folder.
 6. If **\$zipfile** exists and contains data append todays date to the end of it, and move it into **\$archive**.
 7. Delete all files from **\$source** to prepare for next run.
