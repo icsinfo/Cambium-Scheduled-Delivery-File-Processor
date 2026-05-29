@@ -28,7 +28,10 @@ This document will explain the similarities between all the parsers and the reas
 > [!IMPORTANT]
 > **Only Invalidations are Loaded**  
 > There are values to represent a *completed* score but these are left out because the imports are set to **Insert Only** if we put the test_status of C and the score_flag of 1 then if a score was invalidated in a later Cambium file, after scores were entered by an earlier Cambium file, Focus would not import the new test_status or score_flag.
-> Only loading these when a test is invalidated allows us to insert invalidations that happen after scores are initially released. These invalidations can then be processed and the invalid scores deleted by using the **Invalidated Tests - Passed Dates Cleanup** Managed Integration (will be added to repository soon).
+> Only loading these when a test is invalidated allows us to insert invalidations that happen after scores are initially released. These invalidations can then be processed and the invalid scores deleted through a managed integration.
+
+> [!CAUTION]
+> If you run Focus' Process Assessments nightly job you will also need to check all the "Assessment Passed Date" fields to see if any test was placed into those fields then later became invalidated, if so you will need to clear the field.
 
 ## Test Score Columns
 Most test parts are specific to the individual test but I would like to point out 2 that exist in a lot of File Parsers:
