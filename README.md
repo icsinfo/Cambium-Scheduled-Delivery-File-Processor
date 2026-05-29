@@ -4,7 +4,10 @@
 
 Cambium/TIDE is the vendor that FLDOE uses to process state testing. They have an API called *Scheduled Delivery* that outputs test scores nightly for any tests a districts students took that day to an SFTP server.
 This project is a powershell script that processes those output files into something that can be automatically imported into a Student Information System (SIS).
-This project was designed specifically for use with [Focus](https://focusschoolsoftware.com/) and will contain the File Parsers I have for use with the default File Groups  (see below) within the powershell script.
+This project was designed specifically for use with [Focus](https://focusschoolsoftware.com/) and contains the [File Parsers](File%20Parsers/) I have for use with the default File Groups  (see below) within the powershell script.
+
+> [!TIP]
+> This README describes the powershell script used to process the files that come nightly from Cambium, if you would like to see a workflow chart for the entire process of loading scores into focus take a look at [Workflow.md](Workflow.md)
 
 ## Order of Events (What the Script Does)
 > [!NOTE]
