@@ -248,7 +248,7 @@ if (-not (Test-Path $archive)) { New-Item -ItemType Directory -Path $archive | O
 if (Test-Path $zipfile) {
 	Write-Host "Found: Unzipping '$zipfile'..." -ForegroundColor Cyan -NoNewline
 	
-	Expand-Archive -Path $zipfile -DestinationPath .\Unzipped -Force
+	Expand-Archive -Path $zipfile -DestinationPath $source -Force
 	
 	Write-Host " Done" -ForegroundColor Green
 	
